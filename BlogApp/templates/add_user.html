@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title></title>
+<meta charset="utf-8"/>
+</head>
+<body>
+<form method="post" action="/post_user">
+ <label>Username :</label>
+ <input id="uname" name="uname" type="text"/>
+ <label>Userpassword :</label>
+ <input id="upass" name="upass" type="text"/>
+ <input type="submit"/>
+</form>
+<ul>
+{% for user in myUser %}
+ <li>{{user.id}}-{{ user.uname }} - {{ user.upass }} </li>
+{% endfor %}
+</ul>
+</body>
+</html>
